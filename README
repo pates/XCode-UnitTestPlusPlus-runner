@@ -1,0 +1,7 @@
+This sample project runs unit tests at build-time using the UnitTest++ framework and displays results in a Cocoa dialog.  The dialog remains open if there are failures, otherwise it exits out automatically after 2 seconds.  A few sample tests are included to illustrate its usage.  Further documentation can be found at http://unittest-cpp.sourceforge.net/. 
+
+The framework was built using https://github.com/pbhogan/UnitTestPlusPlus, with the DeferredTestReporter class modified just a bit so it could be instantiated.  In addition, the framework is copied directly into the app package so other developers don't need to manually add it to Library/Frameworks. 
+
+This project can be used as-is for greenfield development or Code Katas.  For existing Xcode projects, you can add a UnitTest++ target as a dependency to the existing application target.  If the DeferredTestReporter (or any other UnitTest++ class) exhibits unexpected behavior in a legacy project, then you may need to either rebuild the framework so its compiler settings match those the legacy project's, or bring the UnitTest++ source files directly into the project in place of the framework.  
+
+Enjoy!
